@@ -14,7 +14,6 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-
     _controller = AnimationController(vsync: this);
   }
 
@@ -27,6 +26,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueGrey,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                   child: const Text('Pause')),
               ElevatedButton(
                   onPressed: () => _controller.forward(),
-                  child: const Text('Play')),
+                  child: const Text('Resume')),
               ElevatedButton(
                   onPressed: () {
                     _controller.reset();
